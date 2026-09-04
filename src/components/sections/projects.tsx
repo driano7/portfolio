@@ -132,7 +132,7 @@ export function Projects({ projects }: ProjectsProps) {
         <div className="mt-8 rounded-[2rem] border border-violet-300/40 bg-zinc-100/75 p-5 dark:border-violet-500/25 dark:bg-zinc-950/80 md:p-6">
           <div className="mb-3 flex items-center justify-between gap-3">
             <div className="inline-flex items-center gap-2 rounded-full border border-violet-400/50 bg-violet-500/10 px-3 py-1 text-xs font-semibold text-violet-700 dark:border-violet-400/40 dark:text-violet-300">
-              {isEs ? "Producto vivo · Co-fundador & Full-stack" : "Live product · Co-founder & Full-stack"}
+              {isEs ? "Producto vivo v1.5.6 · Co-fundador & Full-stack" : "Live product v1.5.6 · Co-founder & Full-stack"}
             </div>
             <DropdownIconButton
               open={amaxingOpen}
@@ -145,50 +145,59 @@ export function Projects({ projects }: ProjectsProps) {
           </h3>
           <p className="mt-3 max-w-5xl text-sm leading-relaxed text-zinc-700 dark:text-zinc-300 md:text-base">
             {isEs
-              ? "Amaxing es mi proyecto vivo: dos historias cruzadas en la CDMX — un oaxaqueño que la camina todos los días y un defeño que la extraña a la distancia (yo) — para mostrar la ciudad real, sin trampas para turistas. Diseñamos rutas para viajeros solos o grupos pequeños que quieren comer donde comen los que viven aquí, barrios con nombre e historia, y ese surrealismo que solo se entiende caminando con un local."
-              : "Amaxing is my live project: two stories crossing in CDMX — an Oaxaqueño who walks it every day and a defeño who misses it from afar (me) — to show the real city with zero tourist traps. We design routes for solo travelers and small groups who want to eat where locals eat, neighborhoods with their own name and history, and that surrealism you only get by walking it with a local."}
+              ? "Amaxing es mi proyecto vivo: dos historias cruzadas en la CDMX — un oaxaqueño que la camina todos los días y un defeño que la extraña a la distancia (yo) — para mostrar la ciudad real, sin trampas para turistas. 12 experiencias curadas en 4 categorías (Submundo Culinario · Historia Sin Censura · Inmersiones en Barrios · Arte & Museos) para viajeros solos o grupos pequeños (máx. 6–12), comer donde comen los locales, barrios con nombre y ese surrealismo que solo se entiende caminando con un local."
+              : "Amaxing is my live project: two stories crossing in CDMX — an Oaxaqueño who walks it every day and a defeño who misses it from afar (me) — to show the real city with zero tourist traps. 12 curated experiences across 4 categories (Culinary Underworld · Uncensored History · Neighborhood Deep Dives · Art & Museums) for solo travelers and small groups (max 6–12), eating where locals eat, neighborhoods with history and that surrealism you only get by walking it with a local."}
           </p>
           {amaxingOpen ? (
             <div className="defi-dropdown-reveal">
               <p className="mt-3 max-w-5xl text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 md:text-base">
                 {isEs
-                  ? "Propósito: reivindicar lo chilango como hospitalidad, no insulto — sabores, lugares, olores y surrealismo. Operamos 4 categorías curadas: Submundo Culinario, Historia Sin Censura, Inmersiones en Barrios y Arte & Museos. Cada experiencia es local-led, con grupos reducidos y enfoque en lo que ningún mapa señala: mercados que abren antes del amanecer, azoteas con mezcal honesto y rincones que no salen en ninguna guía."
-                  : "Purpose: reclaiming chilango as hospitality, not insult — flavors, places, smells and surrealism. We run 4 curated categories: Culinary Underworld, Uncensored History, Neighborhood Deep Dives and Art & Museums. Every experience is local-led, small-group only, focused on what no map shows: markets opening before dawn, rooftops with honest mezcal, and corners no guide lists."}
+                  ? "Propósito: reivindicar lo chilango como hospitalidad, no insulto — sabores, lugares, olores y surrealismo. Operamos 12 tours: Street Food Centro / Mole Coyoacán / Mezcal & Pulque · Templo Mayor / Bellas Artes / Chapultepec · Coyoacán Frida & Diego / Roma-Condesa / Xochimilco · Antropología / Arte Moderno-Tamayo / MUAC. Además: 5 Journeys autoguiados (Condesa · Centro Palacios · Chapultepec II Agua · Chimalistac · UNAM Murales, 60–80 min, MDX bilingüe) + 5 mapas interactivos CDMX (Comida Tradicional · Zonas Precaución con datos SESNSP/C5 · Vida Nocturna · Joyas Escondidas · Top Atracciones, My Maps embebido) + Local Picks mensual curado por chilangos con IA (OpenRouter Nemotron 120B + NewsAPI + FRED, 8 picks/mes, máx. 9 MDX, fotos locales en /static/images/local-picks)."
+                  : "Purpose: reclaiming chilango as hospitality, not insult — flavors, places, smells and surrealism. We run 12 tours: Street Food Downtown / Mole Coyoacán / Mezcal & Pulque · Templo Mayor / Bellas Artes / Chapultepec · Coyoacán Frida & Diego / Roma-Condesa / Xochimilco · Anthropology / Modern Art-Tamayo / MUAC. Plus: 5 self-guided Journeys (Condesa · Palace District · Chapultepec II Water · Chimalistac · UNAM Murals, 60–80 min, bilingual MDX) + 5 interactive CDMX maps (Traditional Food · Caution Zones w/ SESNSP/C5 data · Nightlife · Hidden Gems · Top Attractions, embedded My Maps) + monthly Local Picks by chilangos via AI (OpenRouter Nemotron 120B + NewsAPI + FRED, 8 picks/mo, max 9 MDX, local images in /static/images/local-picks)."}
               </p>
               <p className="mt-2 max-w-5xl text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 md:text-base">
                 {isEs ? (
                   <>
-                    Lo que hago: full-stack del producto completo — Next.js 12 + Supabase + Stripe + pagos cripto (Ethereum / Base / Lightning, verificación on-chain) + QRs minimalistas{" "}
-                    <span className="font-mono text-xs">AMX-T-</span> / <span className="font-mono text-xs">AMX-C-</span> para check-in con lector de cámara, panel de socio con métricas ML y analítica pasiva, i18n ES/EN y cifrado AES-GCM con GDPR. El sitio vive en{" "}
+                    Lo que hago: ownership full-stack — Next.js 12 (Pages Router) + React 17 + TypeScript + Tailwind 3 + Framer Motion + Supabase (auth/reservas/analytics) + Stripe Checkout (test 4242) + cripto Ethereum/Base/Lightning con verificación on-chain (Etherscan/Basescan, polling 5s) + QRs minimalistas{" "}
+                    <span className="font-mono text-xs">AMX-T-</span> / <span className="font-mono text-xs">AMX-C-</span> con lector ZXing + BarcodeDetector + mdx-bundler (guides/maps/local) + Recharts 2 + AES-256-GCM (Web Crypto client + PBKDF2 server) + i18n ES/EN + roles por env ADMIN/EMPLOYEE + analítica pasiva + panel socio con métricas ML (segmentación, proyección 7/14/30d, demanda por tour, top slots, anomalías z-score). Vive en{" "}
                     <Link
-                      href="https://donovan-amx.vercel.app/about"
+                      href="https://amaxing-amx.vercel.app/about"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="underline hover:text-zinc-900 dark:hover:text-zinc-200"
                     >
-                      donovan-amx.vercel.app
+                      amaxing-amx.vercel.app
                     </Link>
                     {" — "}el abrazo de la ciudad que amamos.
                   </>
                 ) : (
                   <>
-                    What I do: full-stack ownership — Next.js 12 + Supabase + Stripe + crypto payments (Ethereum / Base / Lightning, on-chain verification) + minimal QRs{" "}
-                    <span className="font-mono text-xs">AMX-T-</span> / <span className="font-mono text-xs">AMX-C-</span> for camera-based check-in, partner dashboard with ML metrics and passive analytics, i18n EN/ES and AES-GCM encryption with GDPR controls. Live at{" "}
+                    What I do: full-stack ownership — Next.js 12 (Pages Router) + React 17 + TypeScript + Tailwind 3 + Framer Motion + Supabase (auth/bookings/analytics) + Stripe Checkout (test 4242) + crypto Ethereum/Base/Lightning with on-chain verification (Etherscan/Basescan, 5s polling) + minimal QRs{" "}
+                    <span className="font-mono text-xs">AMX-T-</span> / <span className="font-mono text-xs">AMX-C-</span> with ZXing + BarcodeDetector scanner + mdx-bundler (guides/maps/local) + Recharts 2 + AES-256-GCM (Web Crypto client + PBKDF2 server) + i18n EN/ES + env-based ADMIN/EMPLOYEE roles + passive analytics + partner dashboard with ML metrics (segmentation, 7/14/30d forecast, demand by tour, top slots, z-score anomalies). Live at{" "}
                     <Link
-                      href="https://donovan-amx.vercel.app/about"
+                      href="https://amaxing-amx.vercel.app/about"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="underline hover:text-zinc-900 dark:hover:text-zinc-200"
                     >
-                      donovan-amx.vercel.app
+                      amaxing-amx.vercel.app
                     </Link>
                     {" — "}the embrace of the city we love.
                   </>
                 )}
               </p>
+              <div className="mt-3 flex flex-wrap gap-1.5">
+                <span className="rounded-full border border-violet-300/40 bg-white/60 px-2.5 py-1 text-[11px] font-medium text-zinc-600 dark:border-zinc-700 dark:bg-zinc-900/60 dark:text-zinc-400">Next.js 12</span>
+                <span className="rounded-full border border-violet-300/40 bg-white/60 px-2.5 py-1 text-[11px] font-medium text-zinc-600 dark:border-zinc-700 dark:bg-zinc-900/60 dark:text-zinc-400">Supabase</span>
+                <span className="rounded-full border border-violet-300/40 bg-white/60 px-2.5 py-1 text-[11px] font-medium text-zinc-600 dark:border-zinc-700 dark:bg-zinc-900/60 dark:text-zinc-400">Stripe + Crypto</span>
+                <span className="rounded-full border border-violet-300/40 bg-white/60 px-2.5 py-1 text-[11px] font-medium text-zinc-600 dark:border-zinc-700 dark:bg-zinc-900/60 dark:text-zinc-400">MDX</span>
+                <span className="rounded-full border border-violet-300/40 bg-white/60 px-2.5 py-1 text-[11px] font-medium text-zinc-600 dark:border-zinc-700 dark:bg-zinc-900/60 dark:text-zinc-400">OpenRouter IA</span>
+                <span className="rounded-full border border-violet-300/40 bg-white/60 px-2.5 py-1 text-[11px] font-medium text-zinc-600 dark:border-zinc-700 dark:bg-zinc-900/60 dark:text-zinc-400">Recharts ML</span>
+                <span className="rounded-full border border-violet-300/40 bg-white/60 px-2.5 py-1 text-[11px] font-medium text-zinc-600 dark:border-zinc-700 dark:bg-zinc-900/60 dark:text-zinc-400">AES-GCM</span>
+              </div>
               <div className="mt-4 flex flex-wrap items-center gap-2">
                 <Link
-                  href="https://donovan-amx.vercel.app"
+                  href="https://amaxing-amx.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full border border-zinc-700 bg-zinc-900/60 px-3 py-2 text-xs text-zinc-200 transition-colors hover:border-violet-400/50 hover:text-white"
@@ -197,7 +206,16 @@ export function Projects({ projects }: ProjectsProps) {
                   <ArrowUpRight className="h-3.5 w-3.5" />
                 </Link>
                 <Link
-                  href="https://donovan-amx.vercel.app/about"
+                  href="https://amaxing-amx.vercel.app/tours"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-zinc-700 bg-zinc-900/60 px-3 py-2 text-xs text-zinc-200 transition-colors hover:border-violet-400/50 hover:text-white"
+                >
+                  {isEs ? "12 tours curados" : "12 curated tours"}
+                  <ArrowUpRight className="h-3.5 w-3.5" />
+                </Link>
+                <Link
+                  href="https://amaxing-amx.vercel.app/about"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full border border-zinc-700 bg-zinc-900/60 px-3 py-2 text-xs text-zinc-200 transition-colors hover:border-violet-400/50 hover:text-white"
